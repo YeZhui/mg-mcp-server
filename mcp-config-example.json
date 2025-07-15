@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "alpha-mg-mcp": {
-      "command": "node",
-      "args": ["C:\\path\\to\\mg-mcp-server\\dist\\index.js"],
+      "command": "npx",
+      "args": ["mg-mcp-server"],
       "env": {
         "ALPHAVANTAGE_API_KEY": "your_alphavantage_api_key_here"
       }

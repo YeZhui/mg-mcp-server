@@ -29,6 +29,20 @@
 
 ## 📦 安装说明
 
+### 方式一：通过 npm 安装（推荐）
+
+```bash
+# 全局安装
+npm install -g mg-mcp-server
+
+# 或本地安装
+npm install mg-mcp-server
+```
+
+安装后可直接使用 `npx mg-mcp-server` 启动。
+
+### 方式二：从源码构建
+
 1. 克隆本仓库
 2. 安装依赖：
    ```bash
@@ -54,8 +68,8 @@
 {
   "mcpServers": {
     "alpha-mg-mcp": {
-      "command": "node",
-      "args": ["C:\\path\\to\\mg-mcp-server\\dist\\index.js"],
+      "command": "npx",
+      "args": ["mg-mcp-server"],
       "env": {
         "ALPHAVANTAGE_API_KEY": "你的API密钥"
       }
@@ -65,7 +79,7 @@
 ```
 
 **配置步骤**：
-1. 将 `args` 路径更新为你的实际 `mg-mcp-server/dist/index.js` 位置
+1. 确保已全局安装或在项目目录中安装了 `mg-mcp-server` 包
 2. 在 `ALPHAVANTAGE_API_KEY` 环境变量中设置你的 Alpha Vantage API 密钥
 3. （可选）设置 `ALPHAVANTAGE_PREMIUM=true` 启用付费版功能
 4. （可选）设置 `ALPHAVANTAGE_ENTERPRISE=true` 启用企业版功能
@@ -91,16 +105,25 @@
 
 ## 🎯 使用方法
 
-### 启动服务器
+### 通过 npx 启动（推荐）
 
 ```bash
-# 开发模式
+# 直接使用 npx 启动（无需手动安装）
+npx mg-mcp-server
+```
+
+### 开发模式启动
+
+```bash
+# 开发模式（从源码）
 npm run dev
 
-# 生产模式
+# 生产模式（从源码）
 npm run build
 npm start
 ```
+
+**注意**：MCP 服务器通常由 MCP 客户端自动启动，无需手动运行上述命令。
 
 ## 🛠️ 可用工具
 
